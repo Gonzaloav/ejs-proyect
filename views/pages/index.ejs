@@ -13,8 +13,20 @@
 
 <main>
     <div class="jumbotron">
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>
+        <h1>Top Mascots</h1>
+ <!--Renderizar una variable única en EJS. Para hacer eco de una variable -->
+            <p> 
+                <%= tagline %> 
+            </p>
+            <ul>
+ <!-- Hacer bucle sobre los datos en EJS. Para hacer bucle sobre nuestros datos usaremos .forEach -->
+                <% mascots.forEach(function(mascot) { %>
+                    <li>
+                        <strong><%= mascot.name %></strong>
+                        representing <%= mascot.organization %>, born <%= mascot.birth_year %>
+                    </li>
+                <% }); %>
+            </ul>
     </div>
 </main>
 
@@ -24,7 +36,6 @@
 
 </body>
 </html>
-
 
 <!-- Ahora tenemos nuestros parciales definidos. Lo único que debemos hacer es 
     incluirlos en nuestras vistas. Ahora veremos index.ejs y about.ejs y usaremos la 
