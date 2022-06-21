@@ -31,6 +31,7 @@ app.get('/about', function(req, res) {
 app.listen(8080);
 console.log('8080 este es el puerto mágico');
 
+// http://localhost:8080/
 
 /** Pasar datos a Vistas y Parciales.- Index.ejs
 Vamos a definir algunas variables básicas y una lista para pasar a nuestra página 
